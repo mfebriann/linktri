@@ -13,7 +13,6 @@ function getDataProfile(url) {
 			const profile = datas.Profile;
 			const container = document.querySelector('main');
 			container.innerHTML = printData(profile);
-			console.log(profile);
 		})
 		.catch((e) => {
 			document.body.innerHTML = `<h1 style="text-align:center; color: white;">${e}</h1>`;
@@ -63,7 +62,6 @@ function buttonLinks(links) {
 function socialMedia(links) {
 	return links
 		.map((socialMediaLink) => {
-			console.log(socialMediaLink);
 			return `<a href="${socialMediaLink.link}" title="${socialMediaLink['name-link']}" class="social-media">
 							${socialMediaLink.icon}
 						</a>`;
