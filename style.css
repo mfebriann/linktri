@@ -1,0 +1,141 @@
+:root {
+	--light: #fff;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 40px 20px 20px;
+	font-family: 'Poppins', sans-serif;
+	display: grid;
+	place-items: center;
+
+	/* Change background */
+	background-image: url('https://images.unsplash.com/photo-1488866022504-f2584929ca5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=862&q=80');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+p,
+figure {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+main {
+	width: 100%;
+	opacity: 0;
+	filter: blur(10px);
+	transition: 2s ease-in-out;
+}
+
+main.show {
+	opacity: 1;
+	filter: blur(0);
+}
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.photo-profile {
+	width: 112px;
+	height: 112px;
+	border-radius: 50%;
+	border: 3px solid white;
+}
+
+.name-and-title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.name {
+	font-weight: 500;
+	color: var(--light);
+}
+
+.title {
+	font-size: 14px;
+	color: var(--light);
+	opacity: 0.75;
+}
+
+.container-links {
+	margin-top: 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+/* Change button link */
+.btn-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 16px;
+	border-radius: 200px;
+	font-size: 14px;
+	transition: 150ms ease-in;
+	letter-spacing: 0.5px;
+	line-height: 0;
+	background: #000428; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #004e92, #000428); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: var(--light);
+	box-shadow: 0 2px 8px 0 rgba(223, 223, 223, 0.1);
+}
+
+/* Change size icon */
+.container-links svg {
+	width: 20px;
+	height: 20px;
+}
+
+/* Change color icon */
+.container-links svg,
+.container-links svg path:last-child {
+	fill: var(--light);
+}
+
+.all-social-media {
+	margin-top: 32px;
+	text-align: center;
+	color: var(--light);
+}
+
+.container-social-media {
+	margin-top: 14px;
+	display: flex;
+	justify-content: center;
+	gap: 14px;
+}
+
+.social-media:hover {
+	opacity: 0.6;
+}
+
+.social-media svg {
+	width: 28px;
+	height: 28px;
+	fill: #fff;
+}
+
+@media (min-width: 360px) {
+	.container {
+		max-width: 320px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
