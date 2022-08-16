@@ -87,14 +87,36 @@ main.show {
 	padding: 16px;
 	border-radius: 200px;
 	font-size: 14px;
-	transition: 150ms ease-in;
 	letter-spacing: 0.5px;
 	line-height: 0;
-	background: #000428; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #004e92, #000428); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	color: var(--light);
 	box-shadow: 0 2px 8px 0 rgba(223, 223, 223, 0.1);
+	background-image: linear-gradient(to right, #004e92, #000428);
+	transition: 300ms ease-in-out;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.btn-link::before {
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to right, #0179e1, #0d1341);
+	z-index: -1;
+	transition: opacity 0.5s linear;
+	opacity: 0;
+}
+
+.btn-link:hover {
+	transform: scale(1.06);
+}
+
+.btn-link:hover::before {
+	opacity: 1;
 }
 
 /* Change size icon */
